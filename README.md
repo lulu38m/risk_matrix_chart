@@ -35,6 +35,7 @@ Une application web moderne pour analyser et visualiser les risques selon leur c
 ### Prérequis
 - Node.js 18+ 
 - npm ou yarn
+- SvelteKit
 
 ### Installation manuelle
 
@@ -102,13 +103,12 @@ Cliquez sur n'importe quel point pour ouvrir la modal avec :
 
 ## 🎨 Technologies Utilisées
 
-- **Framework** : Next.js 14 (App Router)
+- **Framework** : SvelteKit
 - **Language** : TypeScript
 - **Styling** : Tailwind CSS
 - **UI Components** : shadcn/ui
-- **Icons** : Lucide React
-- **State Management** : React Hooks
-
+- **Icons** : Lucide Svelte
+  
 ## 📊 Format des Données
 
 ### Structure CSV/Excel attendue :
@@ -129,7 +129,7 @@ Cliquez sur n'importe quel point pour ouvrir la modal avec :
 
 ### Modifier les seuils de risque
 
-Dans `components/risk-chart.tsx` et `components/risk-modal.tsx` :
+Dans `components/RiskChart.svlete` et `components/RiskModale.svelte` :
 
 ```typescript
 const getRiskLevel = (criticite: number, vulnerabilite: number) => {
@@ -143,7 +143,7 @@ const getRiskLevel = (criticite: number, vulnerabilite: number) => {
 
 ### Ajouter de nouvelles couleurs
 
-Dans `app/page.tsx` :
+Dans `route/+page.svelte` :
 
 ```typescript
 const colors = [
@@ -178,37 +178,12 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 ## 🆘 Support
 
 Pour toute question ou problème :
-- Ouvrez une [issue](https://github.com/votre-repo/issues)
-- Consultez la [documentation](https://github.com/votre-repo/wiki)
+- Ouvrez une [issue]([https://github.com/votre-repo/issues](https://github.com/lulu38m/risk_matrix_chart/issues))
+- Consultez la [documentation]([https://github.com/votre-repo/wiki](https://github.com/lulu38m/risk_matrix_chart))
 - Contactez l'équipe de développement
 
 ---
 
-**Développé avec ❤️ par [Votre Nom]**
+**Développé avec ❤️ par lulu**
 
-*Dernière mise à jour : Décembre 2024*
-```
-
-Ce README complet inclut :
-
-## 📋 Sections principales :
-- **Description** et capture d'écran
-- **Fonctionnalités** détaillées avec emojis
-- **Installation** (v0 + manuelle)
-- **Guide d'utilisation** étape par étape
-- **Structure du projet**
-- **Technologies utilisées**
-- **Format des données** avec exemples
-- **Personnalisation** avec extraits de code
-- **Contribution** et roadmap
-- **Support** et licence
-
-## ✨ Points forts :
-- **Visuel attractif** avec emojis et formatage
-- **Instructions claires** pour tous les niveaux
-- **Exemples concrets** de données
-- **Code snippets** pour la personnalisation
-- **Roadmap** pour les futures fonctionnalités
-
-Le README est prêt à être utilisé et peut être facilement adapté selon vos besoins !
-
+*Dernière mise à jour : Juin 2025*
