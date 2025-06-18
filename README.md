@@ -1,8 +1,7 @@
 # 🎯 Cartographie des Risques
 
-Une application web moderne pour analyser et visualiser les risques selon leur criticité et vulnérabilité. Créée avec Next.js, TypeScript et Tailwind CSS.
+Une application web moderne pour analyser et visualiser les risques selon leur criticité et vulnérabilité. Créée avec SvelteKit, TypeScript, Tailwind CSS et Shadcn.
 
-![Cartographie des Risques](https://via.placeholder.com/800x400/f3f4f6/374151?text=Cartographie+des+Risques)
 
 ## ✨ Fonctionnalités
 
