@@ -1,148 +1,147 @@
-# 🎯 Cartographie des Risques
+# 🎯 Risk Mapping
 
-Une application web moderne pour analyser et visualiser les risques selon leur criticité et vulnérabilité. Créée avec SvelteKit, TypeScript, Tailwind CSS et Shadcn.
+A modern web application to analyze and visualize risks based on their criticality and vulnerability. Built with SvelteKit, TypeScript, Tailwind CSS, and Shadcn.
 
+## ✨ Features
 
-## ✨ Fonctionnalités
+### 📊 Interactive Visualization
+- **Scatter plot chart** with colored risk zones
+- **Clickable points** with detailed modal
+- **Customizable axes** (Criticality × Vulnerability)
+- **Legend** for risk levels
 
-### 📊 Visualisation Interactive
-- **Graphique scatter plot** avec zones de risque colorées
-- **Points cliquables** avec modal détaillée
-- **Axes personnalisables** (Criticité × Vulnérabilité)
-- **Légende** des niveaux de risque
+### 📝 Data Entry
+- **Intuitive form** with sliders for criticality/vulnerability
+- **Excel/CSV import** with automatic validation
+- **Template download** to facilitate import
+- **Asset management** (add, delete, list)
 
-### 📝 Saisie de Données
-- **Formulaire intuitif** avec sliders pour criticité/vulnérabilité
-- **Import Excel/CSV** avec validation automatique
-- **Téléchargement de modèle** pour faciliter l'import
-- **Gestion des éléments** (ajout, suppression, liste)
+### 🔍 Detailed Analysis
+- **Interactive modal** on point click
+- **Calculated risk score** (criticality × vulnerability)
+- **Personalized recommendations** based on level
+- **Priority actions** with visual indicators
 
-### 🔍 Analyse Détaillée
-- **Modal interactive** au clic sur les points
-- **Score de risque calculé** (criticité × vulnérabilité)
-- **Recommandations personnalisées** selon le niveau
-- **Actions prioritaires** avec indicateurs visuels
-
-### 🎨 Interface Moderne
-- **Design responsive** adapté mobile/desktop
-- **Thème cohérent** avec shadcn/ui
-- **Animations fluides** et interactions intuitives
-- **Accessibilité** optimisée
+### 🎨 Modern Interface
+- **Responsive design** adapted for mobile/desktop
+- **Consistent theme** with shadcn/ui
+- **Smooth animations** and intuitive interactions
+- **Optimized accessibility**
 
 ## 🚀 Installation
 
-### Prérequis
+### Prerequisites
 - Node.js 18+ 
-- npm ou yarn
+- npm or yarn
 - SvelteKit
 
-### Installation manuelle
+### Manual Installation
 
 ```bash
-# Cloner le projet
+# Clone the project
 git clone https://github.com/lulu38m?tab=repositories
 cd risk-mapping
 
-# Installer les dépendances
+# Install dependencies
 npm install
 
-# Lancer en développement
+# Run in development
 npm run dev
 ```
 
-L'application sera disponible sur [http://localhost:3000](http://localhost:3000)
+The application will be available at [http://localhost:3000](http://localhost:3000)
 
-## 📋 Utilisation
+## 📋 Usage
 
-### 1. Ajouter des Actifs
+### 1. Adding Assets
 
-**Via le formulaire :**
-1. Saisissez le nom de l'actif
-2. Ajustez la criticité (1-10) avec le slider
-3. Ajustez la vulnérabilité (1-10) avec le slider
-4. Cliquez sur "Ajouter l'élément"
+**Via the form:**
+1. Enter the asset name
+2. Adjust criticality (1-10) with the slider
+3. Adjust vulnerability (1-10) with the slider
+4. Click "Add Asset"
 
-**Via import Excel/CSV :**
-1. Préparez un fichier avec les colonnes : `Actif`, `Criticité`, `Vulnérabilité`
-2. Ou téléchargez le modèle fourni
-3. Importez le fichier via l'onglet "Import Excel"
+**Via Excel/CSV import:**
+1. Prepare a file with columns: `Asset`, `Criticality`, `Vulnerability`
+2. Or download the provided template
+3. Import the file via the "Excel Import" tab
 
-### 2. Analyser les Risques
+### 2. Risk Analysis
 
-- **Visualisation** : Les points sont positionnés selon leur criticité (X) et vulnérabilité (Y)
-- **Zones colorées** : 
-  - 🟢 Vert = Risque faible (≤25)
-  - 🟡 Jaune = Risque modéré (26-50)
-  - 🟠 Orange = Risque élevé (51-75)
-  - 🔴 Rouge = Risque critique (>75)
+- **Visualization**: Points are positioned according to their criticality (X) and vulnerability (Y)
+- **Colored zones**: 
+  - 🟢 Green = Low risk (≤25)
+  - 🟡 Yellow = Moderate risk (26-50)
+  - 🟠 Orange = High risk (51-75)
+  - 🔴 Red = Critical risk (>75)
 
-### 3. Consulter les Détails
+### 3. View Details
 
-Cliquez sur n'importe quel point pour ouvrir la modal avec :
-- Score de risque détaillé
-- Métriques visuelles (barres de progression)
-- Recommandations personnalisées
-- Actions prioritaires
+Click on any point to open the modal with:
+- Detailed risk score
+- Visual metrics (progress bars)
+- Personalized recommendations
+- Priority actions
 
-## 📁 Structure du Projet
+## 📁 Project Structure
 
 ```
 ├── route/
-│   ├── +page.svlete             # Page principale
+│   ├── +page.svelte             # Main page
 ├── components/
-│   ├── RiskChart.svlete         # Graphique principal
-│   ├── RiskModal.svlete       # Modal de détails
-│   ├── RiskForm.svlete       # Formulaire de saisie 
-│   ├── ExcelImporte.svelte      # Import de fichiers
-│   └── ui/                   # Composants shadcn/ui
+│   ├── RiskChart.svelte         # Main chart
+│   ├── RiskModal.svelte         # Details modal
+│   ├── RiskForm.svelte          # Input form
+│   ├── ExcelImporter.svelte     # File import
+│   └── ui/                      # shadcn/ui components
 ├── lib/
-│   └── utils.ts              # Utilitaires
+│   └── utils.ts                 # Utilities
 └── README.md
 ```
 
-## 🎨 Technologies Utilisées
+## 🎨 Technologies Used
 
-- **Framework** : SvelteKit
-- **Language** : TypeScript
-- **Styling** : Tailwind CSS
-- **UI Components** : shadcn/ui
-- **Icons** : Lucide Svelte
+- **Framework**: SvelteKit
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide Svelte
   
-## 📊 Format des Données
+## 📊 Data Format
 
-### Structure CSV/Excel attendue :
+### Expected CSV/Excel structure:
 
-| Actif | Criticité | Vulnérabilité |
-|-------|-----------|---------------|
-| Serveur Web | 8 | 6 |
-| Base de données | 9 | 7 |
+| Asset | Criticality | Vulnerability |
+|-------|-------------|---------------|
+| Web Server | 8 | 6 |
+| Database | 9 | 7 |
 | Firewall | 5 | 3 |
-| Poste utilisateur | 4 | 8 |
+| User Workstation | 4 | 8 |
 
-### Règles de validation :
-- **Actif** : Texte libre (obligatoire)
-- **Criticité** : Nombre entre 1 et 10
-- **Vulnérabilité** : Nombre entre 1 et 10
+### Validation rules:
+- **Asset**: Free text (required)
+- **Criticality**: Number between 1 and 10
+- **Vulnerability**: Number between 1 and 10
 
-## 🔧 Personnalisation
+## 🔧 Customization
 
-### Modifier les seuils de risque
+### Modify risk thresholds
 
-Dans `components/RiskChart.svlete` et `components/RiskModale.svelte` :
+In `components/RiskChart.svelte` and `components/RiskModal.svelte`:
 
 ```typescript
-const getRiskLevel = (criticite: number, vulnerabilite: number) => {
-  const risk = criticite * vulnerabilite
-  if (risk <= 25) return { level: "Faible", color: "#10b981" }
-  if (risk <= 50) return { level: "Modéré", color: "#f59e0b" }
-  if (risk <= 75) return { level: "Élevé", color: "#ef4444" }
-  return { level: "Critique", color: "#dc2626" }
+const getRiskLevel = (criticality: number, vulnerability: number) => {
+  const risk = criticality * vulnerability
+  if (risk <= 25) return { level: "Low", color: "#10b981" }
+  if (risk <= 50) return { level: "Moderate", color: "#f59e0b" }
+  if (risk <= 75) return { level: "High", color: "#ef4444" }
+  return { level: "Critical", color: "#dc2626" }
 }
 ```
 
-### Ajouter de nouvelles couleurs
+### Add new colors
 
-Dans `route/+page.svelte` :
+In `route/+page.svelte`:
 
 ```typescript
 const colors = [
@@ -151,38 +150,38 @@ const colors = [
 ]
 ```
 
-## 🤝 Contribution
+## 🤝 Contributing
 
-1. Fork le projet
-2. Créez une branche feature (`git checkout -b feature/nouvelle-fonctionnalite`)
-3. Committez vos changements (`git commit -m 'Ajout nouvelle fonctionnalité'`)
-4. Push vers la branche (`git push origin feature/nouvelle-fonctionnalite`)
-5. Ouvrez une Pull Request
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
 
 ## 📝 Roadmap
 
-- [ ] Export PDF de la cartographie
-- [ ] Filtres avancés par niveau de risque
-- [ ] Historique des modifications
-- [ ] Commentaires sur les actifs
-- [ ] Alertes automatiques
-- [ ] API REST pour intégration
-- [ ] Authentification utilisateur
-- [ ] Tableaux de bord personnalisés
+- [ ] PDF export of the risk map
+- [ ] Advanced filters by risk level
+- [ ] Change history
+- [ ] Asset comments
+- [ ] Automatic alerts
+- [ ] REST API for integration
+- [ ] User authentication
+- [ ] Custom dashboards
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ## 🆘 Support
 
-Pour toute question ou problème :
-- Ouvrez une [issue]([https://github.com/votre-repo/issues](https://github.com/lulu38m/risk_matrix_chart/issues))
-- Consultez la [documentation]([https://github.com/votre-repo/wiki](https://github.com/lulu38m/risk_matrix_chart))
-- Contactez l'équipe de développement
+For any questions or issues:
+- Open an [issue](https://github.com/lulu38m/risk_matrix_chart/issues)
+- Check the [documentation](https://github.com/lulu38m/risk_matrix_chart)
+- Contact the development team
 
 ---
 
-**Développé avec ❤️ par lulu**
+**Developed with ❤️ by lulu**
 
-*Dernière mise à jour : Juin 2025*
+*Last updated: June 2025*
