@@ -20,7 +20,6 @@ const config = {
 		}),
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/risk_matrix_chart' : '',
-			relative: false
 		},
 		alias: {
 			"@/*": "./path/to/lib/*",
