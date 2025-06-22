@@ -32,7 +32,7 @@
 
 <form on:submit|preventDefault={handleSubmit} class="space-y-4">
 	<div>
-		<Label for="actif">Actif</Label>
+		<Label for="actif" class="pb-2">Actif</Label>
 		<Input
 			id="actif"
 			bind:value={actif}

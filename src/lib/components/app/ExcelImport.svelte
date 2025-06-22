@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
 	import { onMount } from "svelte"
+	import { Button } from "$lib/components/ui/button/index.js";
+
 
 	let file: File | null = null
 	let error = ""
@@ -22,6 +24,7 @@
 		if (selectedFile) {
 			file = selectedFile
 			error = ""
+			console.log("Fichier sélectionné:", selectedFile.name)
 		}
 	}
 
@@ -85,7 +88,7 @@
 <div class="space-y-4">
 	<div>
 		<label for="file-input">Fichier CSV/Excel</label>
-		<input id="file-input" type="file" accept=".csv,.xlsx,.xls" on:change={handleFileChange} class="mt-1" />
+		<input id="file-input" type="file" accept=".csv,.xlsx,.xls" onchange={handleFileChange} class="mt-1" />
 		<p class="text-xs text-gray-500 mt-1">Formats supportés: CSV, Excel (.xlsx, .xls)</p>
 	</div>
 
@@ -96,10 +99,10 @@
 	{/if}
 
 	<div class="flex space-x-2">
-		<button on:click={handleImport} disabled={!file || isLoading} class="flex-1 bg-blue-500 text-white py-2 px-4 rounded disabled:opacity-50">
+		<button onclick={handleImport} disabled={!file || isLoading} class="flex-1 bg-blue-500 text-white py-2 px-4 rounded disabled:opacity-50 hover:bg-blue-600 disabled:cursor-not-allowed">
 			{isLoading ? "Import en cours..." : "Importer"}
 		</button>
-		<button on:click={downloadTemplate} class="flex-1 border border-gray-300 py-2 px-4 rounded">
+		<button onclick={downloadTemplate} class="flex-1 border border-gray-300 py-2 px-4 rounded cursor-pointer hover:bg-gray-50">
 			Télécharger modèle
 		</button>
 	</div>

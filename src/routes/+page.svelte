@@ -81,7 +81,7 @@
 						<Card.CardTitle>Gestion des Données</Card.CardTitle>
 					</Card.CardHeader>
 					<Card.CardContent>
-						<Tabs.Tabs class="w-full">
+						<Tabs.Root value="form" class="w-full">
 							<Tabs.TabsList class="grid w-full grid-cols-2">
 								<Tabs.TabsTrigger value="form">Formulaire</Tabs.TabsTrigger>
 								<Tabs.TabsTrigger value="import">Import Excel</Tabs.TabsTrigger>
@@ -92,7 +92,7 @@
 							<Tabs.TabsContent value="import">
 								<ExcelImport on:Import={importRiskItems} />
 							</Tabs.TabsContent>
-						</Tabs.Tabs>
+						</Tabs.Root>
 					</Card.CardContent>
 				</Card.Card>
 
