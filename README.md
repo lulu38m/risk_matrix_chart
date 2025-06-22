@@ -1,4 +1,4 @@
-# 🎯 Risk Mapping
+# 🎯 [Risk Mapping](https://lulu38m.github.io/risk_matrix_chart/)
 
 A modern web application to analyze and visualize risks based on their criticality and vulnerability. Built with SvelteKit, TypeScript, Tailwind CSS, and Shadcn.
 
