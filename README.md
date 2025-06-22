@@ -39,8 +39,7 @@ A modern web application to analyze and visualize risks based on their criticali
 
 ```bash
 # Clone the project
-git clone https://github.com/lulu38m?tab=repositories
-cd risk-mapping
+git clone https://github.com/lulu38m/risk_matrix_chart
 
 # Install dependencies
 npm install
