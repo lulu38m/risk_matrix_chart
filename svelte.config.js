@@ -8,7 +8,7 @@ const config = {
 	kit: {
 		appDir: 'app',
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/risk_matrix_chart\n' : '',
+			base: process.env.NODE_ENV === 'production' ? '/risk_matrix_chart' : '',
 		},
 		adapter: adapter({
 			pages: 'build',
