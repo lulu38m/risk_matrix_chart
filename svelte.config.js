@@ -13,7 +13,7 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter(),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/sveltekit-github-pages' : '',
+			base: process.env.NODE_ENV === 'production' ? '/risk_matrix_chart' : '',
 		},
 		alias: {
 			"@/*": "./path/to/lib/*",
